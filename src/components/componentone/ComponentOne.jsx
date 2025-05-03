@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 
 const ComponentOne = ({ item, color }) => {
-   const name = item.category.name.brand.throwErrorHere;
+   const name = item.category.name.brand.throwErrorHere; //This will be caught inside <ErrorBoundary></ErrorBoundary> inside App.jsx.
 
    try {
       if (item?.category?.type === "Rotisserie Chicken") throw new Error(`I HATE ${item.category.type} and is why I threw this error!!!`)
